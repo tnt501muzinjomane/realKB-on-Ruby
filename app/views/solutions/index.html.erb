@@ -1,0 +1,56 @@
+<h1>Available solutions</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Solution_1</th>
+      <th>Screenshot_1</th>
+      <th>Solution_2</th>
+      <th>Screenshot_2</th>
+      <th>Solution_3</th>
+      <th>Screenshot_3</th>
+      <th>Solution_4</th>
+      <th>Screenshot_4</th>
+      <th>Solution5</th>
+      <th>Screenshot_5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<tr>
+<%= form_tag solutions_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], :placeholder => "search" %><br>
+    <%= submit_tag "Search solutions", :name => nil, class:'btn btn-success' %>
+<% end %>
+</tr>
+<tr>
+    <div class="foobar" style="background-color:#F2F2F2;"  %>
+<% if @solution %>
+ <h5>(<%= @solution.count %>) Solutions Found</h5>
+<% end %>
+</div>
+    </tr>
+    <% @solution.each do |solution| %>
+      <tr>
+        <td><%= solution.solution1 %></td>
+        <td><%= image_tag solution.image1_url.to_s %></td>
+        <td><%= solution.solution2 %></td>
+         <td><%= image_tag solution.image2_url.to_s %></td>
+        <td><%= solution.solution3 %></td>
+        <td><%= image_tag solution.image3_url.to_s %></td>
+        <td><%= solution.solution4 %></td>
+        <td><%= image_tag solution.image4_url.to_s %></td>
+        <td><%= solution.solution5 %></td>
+        <td><%= image_tag solution.image5_url.to_s %></td>
+        <td><%= link_to 'Show', solution, class:'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_solution_path(solution), class:'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', solution, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

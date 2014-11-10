@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  solution1: MyText
+  image1: MyString
+  solution2: MyText
+  image2: MyString
+  solution3: MyText
+  image3: MyString
+  solution4: MyText
+  image4: MyString
+  solution5: MyText
+  image5: MyString
+  problem_id: 1
+  user_id: 1
+
+two:
+  solution1: MyText
+  image1: MyString
+  solution2: MyText
+  image2: MyString
+  solution3: MyText
+  image3: MyString
+  solution4: MyText
+  image4: MyString
+  solution5: MyText
+  image5: MyString
+  problem_id: 1
+  user_id: 1

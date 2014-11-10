@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @solutions.solution1%>
+</p>
+
+<%= link_to 'Edit', edit_solutionsdisplay_path(@solutionsdisplay) %> |
+<%= link_to 'Back', solutionsdisplays_path %>

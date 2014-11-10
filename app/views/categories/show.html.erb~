@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category.name %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category), class:'btn btn-warning' %> |
+<%= link_to 'View categories', categories_path, class:'btn btn-success' %>

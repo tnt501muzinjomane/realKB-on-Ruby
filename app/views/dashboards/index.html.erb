@@ -1,0 +1,23 @@
+<h1 align="center"><%= image_tag("logo.png", :alt => "real Knowledge Base", :size => "400x600") %></h1>
+<br><br><br>
+<%= form_tag dashboards_path, :method => 'get' do %>
+ <p align="center"> 
+    <%= text_field_tag :search, params[:search],:class => "span5", :placeholder => "search real Knowledge Base" %><br>
+    <%= submit_tag "Search realKB", :name => nil, class:'btn btn-success' %>
+  </p>
+<% end %>
+<div class="foobar" style="background-color:#F2F2F2;"  %>
+<% if @problem %>
+ <h5>(<%= @problem.count %>) Results Found</h5>
+<% end %>
+</div>
+<% @problem.each do |problem| %>
+<table>
+      <tr><hr>
+        <td><h5><%= link_to problem.title, :controller => 'solutionsdisplays', :action => 'index', :problem_id => problem.id %></h5></td>
+        </tr>
+        <tr>
+        <td><%= problem.description %></td>
+      </tr>
+</table>
+<% end %>

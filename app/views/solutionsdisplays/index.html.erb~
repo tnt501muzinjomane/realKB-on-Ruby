@@ -1,0 +1,27 @@
+<div class="foobar" style="background-color:#F2F2F2;"  %>
+<table> 
+      <tr><h3>Available possible solutions</h3></tr>
+       <tr>
+       <div class="foobar" style="background-color:#FFFFFF;"  %>
+       <% if @solution %>
+       <span> <h5>(<%= @solution.count %>) Solutions Found</h5></span>
+       <% end %>
+       </div>
+       <% @solution.each do |solution| %>
+        </tr>
+        <tr>
+        
+        <td><div class="foobar" style="background-color:#000;">~</div><hr><hr><%= solution.solution1 %></td></tr>
+        <tr><td><%= image_tag solution.image1_url.to_s %></td></tr>
+        <tr><td><%= solution.solution2 %></td></tr>
+        <tr><td><%= image_tag solution.image2_url.to_s %></td></tr>
+        <tr><td><%= solution.solution3 %></td></tr>
+        <tr><td><%= image_tag solution.image3_url.to_s %></td></tr>
+        <tr><td><%= solution.solution4 %></td></tr>
+        <tr><td><%= image_tag solution.image4_url.to_s %></td></tr>
+        <tr><td><%= solution.solution5 %></td></tr>
+        <tr><td><%= image_tag solution.image5_url.to_s %></td></tr>
+ <% end %>
+</div>
+</table>
+

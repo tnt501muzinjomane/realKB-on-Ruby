@@ -1,0 +1,2 @@
+class Solutionsdisplay < ActiveRecord::Base
+end
